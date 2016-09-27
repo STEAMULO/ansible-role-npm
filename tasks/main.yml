@@ -1,7 +1,7 @@
 ---
 
 - name: npm | Install the `nodejs-legacy` and `npm` package
-  apt: pkg={{ item }}
+  apt: name={{ item }} state=present update_cache=true
   with_items:
     - nodejs-legacy
     - npm
